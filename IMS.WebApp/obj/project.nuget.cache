@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "sQXovdKocniNekk1AYwBJLC97ePHoto7mnw3ONNUrZjugIRKhxgX7u/pOpiGJKrDbW9uDHZia+UOPcUvMz4KFQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\hesam\\source\\repos\\IMS\\IMS.WebApp\\IMS.WebApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\hesam\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512"
+  ],
+  "logs": []
+}

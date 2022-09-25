@@ -1,0 +1,23 @@
+﻿<div class="input-group">
+    <input @bind="inventoryNameToSearch" type="text" class="form-control col-8" placeholder="Type name here to search" @onkeydown="OnEnter" @onfocusout="OnSearch"/>
+    <input type="button" class="btn btn-primary input-group-lg col-1" value="Search" @onclick="OnSearch"/>
+</div>
+
+
+@code
+{
+    private string inventoryNameToSearch = String.Empty;
+
+    [Parameter]
+    public EventCallback<string> OnSearchInventory { get; set; }
+
+    private void OnSearch()
+    {
+        OnSearchInventory.InvokeAsync(inventoryNameToSearch);
+    }
+
+    private void OnEnter(KeyboardEventArgs e)
+    {
+        if (e.Code == "Enter" || e.Code == "NumpadEnter") OnSearchInventory.InvokeAsync(inventoryNameToSearch);
+    }
+}

@@ -1,0 +1,18 @@
+﻿@page "/editinventory/{inventoryid:int}"
+@inject IViewInventoryByIdUseCase viewInventoryByIdUseCase
+
+<h3>Edit Inventory</h3>
+@inventory.InventoryName
+
+@code {
+    [Parameter]
+    public int InventoryId { get; set; }
+
+    public Inventory inventory { get; set; } = new Inventory();
+
+    protected override async Task OnParametersSetAsync()
+    {
+        inventory = await viewInventoryByIdUseCase.ExecuteAsync(InventoryId);
+    }
+
+}
